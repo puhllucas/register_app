@@ -54,7 +54,7 @@ class Application:
             data.append(item.get())
             item.delete(0, END)
             
-        if any(element == '' for element in data): # QUE SACADA DO CHATGPT <3
+        if any(element == '' for element in data):
             messagebox.showwarning(title="Empty Fields", message="You need to fill the fields")
         else:
             self.cur.execute("INSERT INTO customer(name, email) VALUES(?, ?)", data)
